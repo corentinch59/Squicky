@@ -790,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squicky
       objectReference: {fileID: 0}
+    - target: {fileID: 4780174958484931043, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
