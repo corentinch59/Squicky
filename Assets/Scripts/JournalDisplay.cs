@@ -11,6 +11,9 @@ public class JournalDisplay : MonoBehaviour
 
     [SerializeField] private Image leftPage;
     [SerializeField] private Image rightPage;
+    
+    [SerializeField] private Button nextButton;
+    [SerializeField] private Button previousButton;
 
     private int currentIndex = 0;
 
@@ -22,6 +25,7 @@ public class JournalDisplay : MonoBehaviour
     public void NextPage()
     {
         currentIndex = Mathf.Min(currentIndex + 2, journal.GetPageCount());
+        currentIndex -= currentIndex % 2;
         OnJournalUpdated();
     }
 
@@ -65,5 +69,9 @@ public class JournalDisplay : MonoBehaviour
         {
             rightPage.gameObject.SetActive(false);
         }
+        
+        // hide or show buttons
+        nextButton.gameObject.SetActive(currentIndex < journal.GetPageCount() - journal.GetPageCount() % 2);
+        previousButton.gameObject.SetActive(currentIndex > 0);
     }
 }
