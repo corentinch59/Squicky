@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab85d92f7bcd8cc459924f63479b343d, type: 3}
   m_Name: Page7
   m_EditorClassIdentifier: 
-  pageImage: {fileID: 0}
-  pageNumber: 0
+  pageImage: {fileID: 21300000, guid: 70acb00866126594e80e1b1f8782b447, type: 3}
+  pageNumber: 7
