@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9bacbb-9026-41fb-b2e9-5ca638b29b39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Squicky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squicky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/ForestAssets/Low Poly Environment/Prefabs/Tree 1 .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/ForestAssets/Low Poly Environment/Prefabs/Tree 1 .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/ForestAssets/Low Poly Environment/Prefabs/Tree 2 .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/ForestAssets/Low Poly Environment/Prefabs/Tree 2 .prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrashCanInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.12/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -93,7 +95,7 @@
       <workItem from="1749159040016" duration="565000" />
       <workItem from="1749160661154" duration="3000" />
       <workItem from="1749315072745" duration="14000" />
-      <workItem from="1749325161817" duration="5657000" />
+      <workItem from="1749325161817" duration="6861000" />
     </task>
     <servers />
   </component>

@@ -22,6 +22,12 @@ public class Inventory : MonoBehaviour
 
         
     }
+
+    public void ThrowTrash()
+    {
+        trashCounter = 0;
+        trashCounterText.text = trashCounter.ToString();
+    }
 }
 
 

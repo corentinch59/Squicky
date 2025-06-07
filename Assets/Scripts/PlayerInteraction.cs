@@ -16,7 +16,7 @@ public class PlayerInteraction : MonoBehaviour
         
         foreach (var hit in hits)
         {
-            Interactable interactable = hit.GetComponent<Interactable>();
+            IInteract interactable = hit.GetComponent<IInteract>();
             if (interactable != null)
             {
                 interactable.Interact(gameObject);
