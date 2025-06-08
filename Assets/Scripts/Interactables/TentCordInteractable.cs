@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TentCordInteractable : MonoBehaviour, IInteract
+public class TentCordInteractable : MonoBehaviour
 {
     [SerializeField] Material cutMaterial;
     public bool cut = false;

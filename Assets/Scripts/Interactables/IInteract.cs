@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IInteract 
 {
-    void Interact(GameObject interactor);
+    public void UseInteractable(GameObject interactor);
+    public void PickUpInteractable(GameObject interactor);
 }

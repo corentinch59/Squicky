@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour, IInteract
+public class WasteInteractable : MonoBehaviour
 {
     [SerializeField] string itemName;
     public void Interact(GameObject interactor)
