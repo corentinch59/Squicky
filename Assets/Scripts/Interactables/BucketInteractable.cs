@@ -8,6 +8,9 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
 {
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _jumpDuration;
+    [SerializeField] private LayerMask _layerMask;
+
+    [HideInInspector] public bool isBucketFilled = false;                    
 
     public void Interact(GameObject interactor)
     {
@@ -46,7 +49,33 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
 
     public void Use(GameObject interactor)
     {
-        throw new System.NotImplementedException();
+        Collider[] hits = Physics.OverlapSphere(transform.position, 2, _layerMask);
+
+        if (hits.Length <= 0)
+            return;
+
+        float d = (hits[0].transform.position - transform.position).sqrMagnitude;
+        GameObject temp = hits[0].gameObject;
+
+        foreach (var hit in hits)
+        {
+            float tempD = (hit.transform.position - transform.position).sqrMagnitude;
+            if (tempD < d)
+            {
+                d = tempD;
+                temp = hit.gameObject;
+            }
+        }
+
+
+        if (temp != null)
+        {
+            IBucketReceiver interactable = temp.GetComponent<IBucketReceiver>();
+            if (interactable == null)
+                return;
+
+            interactable.ReceiveBucket(this);
+        }
     }
 
 }

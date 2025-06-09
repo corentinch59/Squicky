@@ -58,10 +58,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1751480086967751553, guid: d91a10e7f00da914d957272a3d07a6e3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d91a10e7f00da914d957272a3d07a6e3,
         type: 3}
       propertyPath: m_Name
       value: styrofoam
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d91a10e7f00da914d957272a3d07a6e3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

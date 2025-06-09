@@ -28,7 +28,7 @@ public class PlayerInteraction : MonoBehaviour
                     return;
 
                 float d = (hits[0].transform.position - transform.position).sqrMagnitude;
-                GameObject temp = _interactable = hits[0].gameObject;
+                GameObject temp = hits[0].gameObject;
 
                 foreach (var hit in hits)
                 {
