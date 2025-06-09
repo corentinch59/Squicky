@@ -74,4 +74,9 @@ public class JournalDisplay : MonoBehaviour
         nextButton.gameObject.SetActive(currentIndex < journal.GetPageCount() - journal.GetPageCount() % 2);
         previousButton.gameObject.SetActive(currentIndex > 0);
     }
+
+    public void Toggle()
+    {
+        gameObject.SetActive(!gameObject.activeInHierarchy);
+    }
 }

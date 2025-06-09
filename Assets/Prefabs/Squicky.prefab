@@ -245,6 +245,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 81c0da28-df0d-4291-bcaa-a90af9fab004
     m_ActionName: Player/Drop
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: JournalDisplay, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 14cfcaf5-082a-4908-8f96-911faaf30f09
+    m_ActionName: Player/Journal[/Keyboard/j]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
