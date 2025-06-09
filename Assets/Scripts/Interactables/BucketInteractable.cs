@@ -8,6 +8,7 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
 {
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _jumpDuration;
+
     public void Interact(GameObject interactor)
     {
         PlayerInteraction p = interactor.GetComponent<PlayerInteraction>();
@@ -24,9 +25,10 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
         }
 
         p.HeldInteractable = gameObject;
+        transform.SetParent(interactor.transform);
         transform.DORotateQuaternion(Quaternion.identity, _jumpDuration);
-        Tween t = transform.DOJump(p.GetHeadSpot.position, _jumpPower, 1, _jumpDuration);
-        t.OnComplete(() => { transform.SetParent(interactor.transform); });
+        Tween t = transform.DOLocalJump(p.GetHeadSpot.localPosition, _jumpPower, 1, _jumpDuration);
+
     }
 
     public void Drop()

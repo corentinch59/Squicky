@@ -741,7 +741,6 @@ GameObject:
   - component: {fileID: 1641164789}
   - component: {fileID: 1641164793}
   - component: {fileID: 1641164788}
-  - component: {fileID: 1641164787}
   m_Layer: 6
   m_Name: Bucket
   m_TagString: Untagged
@@ -749,29 +748,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1641164787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641164786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b86821377bcc140bcc32e9e8ea2469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
-  _onPickup:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1641164788}, m_TargetAssemblyTypeName: BucketInteractable, Assembly-CSharp, m_MethodName: Pickup, m_Mode: 0, m_Arguments: {m_ObjectArgument: {fileID: 0},
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0,
-          m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
 --- !u!114 &1641164788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e0fad4d8f5dff4a867e8b56a8e2ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpPower: 5
+  _jumpPower: 1
   _jumpDuration: 0.5
 --- !u!65 &1641164789
 BoxCollider:
