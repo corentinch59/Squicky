@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f773459a671d90e4d96d7790a74055dc, type: 3}
   m_Name: Quete1
   m_EditorClassIdentifier: 
-  title: Test
-  description: Je sais pas trop
+  title: "D\xE9ch\xEAts"
+  description: "Ramasser des d\xE9ch\xEAts"
   onQueteUpdated:
     m_PersistentCalls:
       m_Calls: []

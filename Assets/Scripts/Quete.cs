@@ -50,4 +50,22 @@ public class Quete : ScriptableObject
             onQueteCompleted.Invoke(this);
         }
     }
+
+    public int GetStageCount()
+    {
+        return stages.Length;
+    }
+    
+    public int GetCompletedStageCount()
+    {
+        int count = 0;
+        foreach (QueteStage stage in stages)
+        {
+            if (stage.IsCompleted())
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }

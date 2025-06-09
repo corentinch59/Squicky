@@ -25,7 +25,7 @@ public class SingleQueteDisplay : MonoBehaviour
 
     public void QueteUpdate()
     {
-        titleText.text = quete.title;
+        titleText.text = quete.title + " " + string.Format("({0}/{1})", quete.GetCompletedStageCount(), quete.GetStageCount());
         descriptionText.text = quete.description;
     }
 

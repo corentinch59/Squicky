@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a84e21f53148f9b15ee1f70b53be99, type: 3}
   m_Name: Quete1Stage1
   m_EditorClassIdentifier: 
-  title: Prout
-  description: Le pet lol
+  title: Canette
+  description: Ramasser la canette
   isCompleted: 0
   onCompleted:
     m_PersistentCalls:
