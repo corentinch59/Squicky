@@ -6,53 +6,67 @@ using UnityEngine.InputSystem;
 public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] private float interactionRadius = 2f;
+    [SerializeField] private Transform _headSpot;
+    [SerializeField] private LayerMask _layerMask;
+
+    public Transform GetHeadSpot {  get { return _headSpot; } }
 
     private GameObject _interactable;
+
+    public GameObject HeldInteractable { set { _interactable = value; } }
 
     public void Interact(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
         {
-            if (_interactable != null)
+            if (_interactable == null)
             {
                 //Pickup
-                Collider[] hits = Physics.OverlapSphere(transform.position, interactionRadius);
+                Collider[] hits = Physics.OverlapSphere(transform.position, interactionRadius, _layerMask);
 
-                float d = 0;
-                GameObject temp = null;
+                if (hits.Length <= 0)
+                    return;
+
+                float d = (hits[0].transform.position - transform.position).sqrMagnitude;
+                GameObject temp = _interactable = hits[0].gameObject;
 
                 foreach (var hit in hits)
                 {
-                    float tempD = (hit.transform.position - hit.transform.position).sqrMagnitude;
+                    float tempD = (hit.transform.position - transform.position).sqrMagnitude;
                     if (tempD < d)
                     {
                         d = tempD;
-                        _interactable = hit.gameObject;
+                        temp = hit.gameObject;
                         //TODO ajouter une UI pour indiquer avec quel Interactable on interagit
                     }
                 }
 
-                Interactable interactable = _interactable.GetComponent<Interactable>();
-                if (interactable != null)
+
+                if (temp != null)
                 {
-                    interactable.PickUpInteractable(gameObject);
+                    IInteractable interactable = temp.GetComponent<IInteractable>();
+                    interactable.Interact(gameObject);
                 }
             }
             else
             {
                 //Use
-                Interactable interactable = _interactable.GetComponent<Interactable>();
-                if (interactable != null)
+                IDropable dropable = _interactable.GetComponent<IDropable>();
+                if (dropable != null)
                 {
-                    interactable.PickUpInteractable(gameObject);
+                    dropable.Use(gameObject);
                 }
             }
 
         }
     }
 
-    public void Drop()
+    public void Drop(InputAction.CallbackContext ctx)
     {
-
+        if (ctx.started)
+        {
+            _interactable.GetComponent<IDropable>().Drop();
+            _interactable = null;
+        }
     }
 }

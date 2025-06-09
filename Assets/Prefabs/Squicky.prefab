@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4780174958484931043}
   - component: {fileID: 8552033610436442569}
   - component: {fileID: 8736823576063413332}
+  - component: {fileID: 7679432700439755985}
   - component: {fileID: 1643623938370667021}
   m_Layer: 0
   m_Name: Squicky
@@ -34,7 +35,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3531375087978628888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8545361180862711877
@@ -151,6 +153,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 8552033610436442569}
   _speed: 2
+--- !u!114 &7679432700439755985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539116397095707949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6e0305ee1c894995e4e70428eb749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRadius: 2
+  _headSpot: {fileID: 3531375087978628888}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &1643623938370667021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +213,19 @@ MonoBehaviour:
     m_ActionId: db6fc83c-70f9-48e0-aa83-8937356cddc1
     m_ActionName: Player/Movement[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7679432700439755985}
+        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: aa9c4b03-8ae3-4ef2-ba0e-ae0626f5225f
     m_ActionName: Player/Interact[/XInputControllerWindows/buttonSouth,/Keyboard/e]
   - m_PersistentCalls:
@@ -206,3 +237,34 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &6662613620744856263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3531375087978628888}
+  m_Layer: 0
+  m_Name: HeadSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3531375087978628888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6662613620744856263}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.487, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3384622777126620515}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
