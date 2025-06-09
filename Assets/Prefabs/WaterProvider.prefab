@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6014403320371772757}
   - component: {fileID: 8042029446164141394}
   - component: {fileID: 6041694409341795573}
+  - component: {fileID: 2401046930824730827}
   m_Layer: 6
   m_Name: WaterProvider
   m_TagString: Untagged
@@ -106,3 +107,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5773414507879058128, guid: 593d4f7dc5f444843b2b02f101b56b8c, type: 3}
+--- !u!114 &2401046930824730827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321763260716686873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0f8d139679a9945b8f1536ea9588e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

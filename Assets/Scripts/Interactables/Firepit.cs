@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BucketFiller : MonoBehaviour, IBucketReceiver
+public class Firepit : MonoBehaviour, IBucketReceiver
 {
     public void ReceiveBucket(BucketInteractable bucket)
     {
-        bucket.isBucketFilled = true;
-        //Update Journal and Bucket to filled state
+        bucket.isBucketFilled = false;
+        //Update journal fire extinguished and 
     }
 }
