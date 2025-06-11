@@ -1,20 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Tent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private Transform _visual;
 
     public void UpdateCords()
     {
@@ -23,9 +15,18 @@ public class Tent : MonoBehaviour
         {
             if (!cord.cut)
             {
+                // animation shiver
+                transform.DOShakeRotation(0.5f, new Vector3(0, 10, 0));
                 return;
             }
         }
-        Destroy(gameObject);
+        
+        // animation tente qui s'envole
+        Sequence seq = DOTween.Sequence();
+        seq.Join(transform.DOMoveY(transform.position.y + 10, 1));
+        seq.Join(transform.DOShakeRotation(1, new Vector3(20, 20, 20)));
+        seq.Join(transform.DOScale(0, 1));
+        seq.AppendCallback(() => Destroy(gameObject));
+        
     }
 }
