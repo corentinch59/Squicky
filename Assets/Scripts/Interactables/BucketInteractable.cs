@@ -29,9 +29,8 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
 
         p.HeldInteractable = gameObject;
         transform.SetParent(interactor.transform);
-        transform.DORotateQuaternion(Quaternion.identity, _jumpDuration);
+        transform.DORotateQuaternion(interactor.transform.rotation, _jumpDuration);
         Tween t = transform.DOLocalJump(p.GetHeadSpot.localPosition, _jumpPower, 1, _jumpDuration);
-
     }
 
     public void Drop()
@@ -49,7 +48,7 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
 
     public void Use(GameObject interactor)
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position, 2, _layerMask);
+        Collider[] hits = Physics.OverlapSphere(transform.position, 4, _layerMask);
 
         if (hits.Length <= 0)
             return;

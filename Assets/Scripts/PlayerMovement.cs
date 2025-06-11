@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField] private Rigidbody _rb;
+    [SerializeField] private Camera _camera;
     [SerializeField] private float _speed;
 
     private Vector2 _mDirection;
@@ -20,18 +21,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.velocity = new Vector3(_mDirection.x * _speed, _rb.velocity.y, _mDirection.y * _speed);
-        if (_rb.velocity.sqrMagnitude > 0.01f)
-        {
-            Vector3 look = _rb.velocity.normalized;
-            look.y = 0;
+        Vector3 input = new Vector3(_mDirection.x, 0, _mDirection.y);
+        Vector3 camForward = _camera.transform.forward;
+        Vector3 camRight = _camera.transform.right;
+        camForward.y = 0;
+        camRight.y = 0;
+        camForward.Normalize();
+        camRight.Normalize();
 
-            if (look == Vector3.zero)
-                return;
+        Vector3 move = (camForward * input.z + camRight * input.x).normalized;
+        move.y = _rb.velocity.y;
+        _rb.velocity = new Vector3(move.x * _speed, _rb.velocity.y, move.z * _speed);
 
-            Quaternion targetRotation = Quaternion.LookRotation(look);
-            _rb.rotation = targetRotation;
-        }
+
+        Vector3 look = _rb.velocity.normalized;
+        look.y = 0;
+
+        if (look == Vector3.zero)
+            return;
+
+        Quaternion targetRotation = Quaternion.LookRotation(look);
+        _rb.rotation = targetRotation;
     }
 
 }

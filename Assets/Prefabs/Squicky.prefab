@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8545361180862711877}
   - component: {fileID: 1471952126548329554}
   - component: {fileID: 4780174958484931043}
-  - component: {fileID: 8552033610436442569}
   - component: {fileID: 8736823576063413332}
   - component: {fileID: 7679432700439755985}
   - component: {fileID: 1643623938370667021}
   - component: {fileID: 5697586462835720645}
+  - component: {fileID: 5742940160410420413}
   m_Layer: 0
   m_Name: Squicky
   m_TagString: Untagged
@@ -113,33 +113,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8552033610436442569
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539116397095707949}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &8736823576063413332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,8 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6256bd09cecda964d96bbe2b6b6418f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rb: {fileID: 8552033610436442569}
-  _speed: 10
+  _rb: {fileID: 5742940160410420413}
+  _camera: {fileID: 0}
+  _speed: 7
 --- !u!114 &7679432700439755985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +219,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 81c0da28-df0d-4291-bcaa-a90af9fab004
     m_ActionName: Player/Drop
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14cfcaf5-082a-4908-8f96-911faaf30f09
+    m_ActionName: Player/Journal[/Keyboard/j,/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -263,6 +241,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashCounterText: {fileID: 0}
+--- !u!54 &5742940160410420413
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539116397095707949}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6662613620744856263
 GameObject:
   m_ObjectHideFlags: 0
