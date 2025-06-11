@@ -4737,9 +4737,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1643623938370667021, guid: afba301dce844e146803d10d281705a6,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643623938370667021, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643623938370667021, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1483215620}
+    - target: {fileID: 1643623938370667021, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643623938370667021, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643623938370667021, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: JournalDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643623938370667021, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3384622777126620515, guid: afba301dce844e146803d10d281705a6,
         type: 3}
       propertyPath: m_LocalPosition.x
