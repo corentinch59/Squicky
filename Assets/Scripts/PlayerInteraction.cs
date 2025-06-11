@@ -65,8 +65,11 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (ctx.started)
         {
-            _interactable.GetComponent<IDropable>().Drop();
-            _interactable = null;
+            if(_interactable != null)
+            {
+                _interactable.GetComponent<IDropable>().Drop();
+                _interactable = null;
+            }
         }
     }
 }
