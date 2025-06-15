@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WasteInteractable : MonoBehaviour, IInteractable
 {
@@ -9,6 +10,7 @@ public class WasteInteractable : MonoBehaviour, IInteractable
     
     private float _animationDuration = 0.3f;
     private bool _hasBeenCollected = false;
+    public UnityEvent onFinished;
     
     public void Interact(GameObject interactor)
     {
@@ -23,6 +25,7 @@ public class WasteInteractable : MonoBehaviour, IInteractable
         seq.AppendCallback((() =>
         {
             interactor.GetComponent<Inventory>().GrabTrash();
+            onFinished.Invoke(); // callback dechet ramassé
             Destroy(gameObject);
         }));
 
