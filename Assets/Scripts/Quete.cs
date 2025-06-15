@@ -12,7 +12,7 @@ public class Quete : ScriptableObject
     public UnityEvent onQueteUpdated;
     public UnityEvent<Quete> onQueteCompleted;
 
-    [SerializeField] private QueteStage[] stages;
+    [SerializeField] public QueteStage[] stages;
 
     private void OnEnable()
     {
@@ -67,5 +67,24 @@ public class Quete : ScriptableObject
             }
         }
         return count;
+    }
+
+    public void FinishStage(int stage)
+    {
+        if (stage < 0 || stage >= stages.Length)
+        {
+            Debug.LogError("Invalid stage index: " + stage);
+            return;
+        }
+        
+        QueteStage queteStage = stages[stage];
+        if (!queteStage.IsCompleted())
+        {
+            queteStage.Complete();
+        }
+        else
+        {
+            Debug.LogWarning("Stage " + stage + " is already completed.");
+        }
     }
 }

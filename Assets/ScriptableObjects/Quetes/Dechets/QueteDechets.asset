@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f773459a671d90e4d96d7790a74055dc, type: 3}
+  m_Name: QueteDechets
+  m_EditorClassIdentifier: 
+  title: "D\xE9ch\xEAts"
+  description: "Ramasser des d\xE9ch\xEAts"
+  onQueteUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  onQueteCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  stages:
+  - {fileID: 11400000, guid: 988a4d9c18821dc4bae8590ee5a56915, type: 2}
+  - {fileID: 11400000, guid: 1d534c0dd48dd3044aebeab4e574b78e, type: 2}
+  - {fileID: 11400000, guid: ea6930002b1934342a5e05a07b8ccdc0, type: 2}
+  - {fileID: 11400000, guid: 8cb0198f54019fa4485a13e7d2eccb1b, type: 2}
+  - {fileID: 11400000, guid: e89536e783f6c8c459ef99bfc216ceb7, type: 2}
+  - {fileID: 11400000, guid: 46b32ac9ab601944db4d086096aa9415, type: 2}
+  - {fileID: 11400000, guid: 60c00b4c46be31b43bd8b162853d84c7, type: 2}
+  - {fileID: 11400000, guid: 4201788403c90a644a7daed924c3b262, type: 2}
+  - {fileID: 11400000, guid: 2a216c43491c3344e890f23140f3ebad, type: 2}
+  - {fileID: 11400000, guid: f01f18c609141f34d870602c57a4f9c7, type: 2}
+  - {fileID: 11400000, guid: 117211ca2e325ad4c9394f8dc84ba9c1, type: 2}
+  - {fileID: 11400000, guid: 19558f9db832bd74db4ed506553302da, type: 2}
+  - {fileID: 11400000, guid: 4c3d88946bfe1594c8c6af7512aca816, type: 2}
+  - {fileID: 11400000, guid: d89bd573ca4f34b4f97c0bb124dd959a, type: 2}
+  - {fileID: 11400000, guid: 8b38b08267bec2d46a4543d921b13a42, type: 2}
+  - {fileID: 11400000, guid: 20ee778b226f1ce4888e134272ef2dde, type: 2}

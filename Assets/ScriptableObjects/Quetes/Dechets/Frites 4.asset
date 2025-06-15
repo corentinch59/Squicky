@@ -9,16 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f773459a671d90e4d96d7790a74055dc, type: 3}
-  m_Name: Quete1
+  m_Script: {fileID: 11500000, guid: 43a84e21f53148f9b15ee1f70b53be99, type: 3}
+  m_Name: Frites 4
   m_EditorClassIdentifier: 
-  title: "D\xE9ch\xEAts"
-  description: "Ramasser des d\xE9ch\xEAts"
-  onQueteUpdated:
+  title: Frites 5
+  description: "Ramasser la cinqui\xE8me boite de frites"
+  isCompleted: 0
+  onCompleted:
     m_PersistentCalls:
       m_Calls: []
-  onQueteCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  stages:
-  - {fileID: 11400000, guid: 988a4d9c18821dc4bae8590ee5a56915, type: 2}
