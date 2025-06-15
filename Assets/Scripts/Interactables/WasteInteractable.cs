@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -11,6 +12,8 @@ public class WasteInteractable : MonoBehaviour, IInteractable
     private float _animationDuration = 0.3f;
     private bool _hasBeenCollected = false;
     public UnityEvent onFinished;
+    public GameObject UIPrefab;
+    private GameObject _currentUI;
     
     public void Interact(GameObject interactor)
     {
@@ -34,4 +37,28 @@ public class WasteInteractable : MonoBehaviour, IInteractable
 
     }
 
+    private void ShowUI()
+    {
+        if (UIPrefab == null && _currentUI!=null) return;
+        _currentUI = Instantiate(UIPrefab, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity);
+    }
+
+    private void HideUI()
+    {
+        if (_currentUI == null) return;
+        Destroy(_currentUI);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            ShowUI();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        HideUI();
+    }
 }

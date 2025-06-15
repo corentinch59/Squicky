@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1986977658312985413}
   - component: {fileID: 6301462029321349787}
   - component: {fileID: 4400969857796369920}
+  - component: {fileID: 8925378343369252682}
   m_Layer: 6
   m_Name: Fil
   m_TagString: Untagged
@@ -120,3 +121,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutMaterial: {fileID: 2100000, guid: 6ee4344b2e6cb3040b70736562f9f674, type: 2}
   cut: 0
+  UIPrefab: {fileID: 8824740394590674201, guid: 34500b29b8126cc42b8b6c6b86e7bf51,
+    type: 3}
+--- !u!135 &8925378343369252682
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013919209649897422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}

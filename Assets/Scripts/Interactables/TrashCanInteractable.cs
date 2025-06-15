@@ -8,6 +8,10 @@ public class TrashCanInteractable : MonoBehaviour, IInteractable
 {
     private float _animationDuration = 0.5f;
     public UnityEvent onFinished;
+    
+    public GameObject UIPrefab;
+    private GameObject _currentUI;
+    
     public void Interact(GameObject interactor)
     {
         transform.DOShakeScale(_animationDuration);
@@ -17,4 +21,30 @@ public class TrashCanInteractable : MonoBehaviour, IInteractable
         interactor.GetComponent<Inventory>().ThrowTrash();
         onFinished.Invoke(); // callback quete qui progresse (dechets jetés)
     }
+    
+    private void ShowUI()
+    {
+        if (UIPrefab == null && _currentUI!=null) return;
+        _currentUI = Instantiate(UIPrefab, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity);
+    }
+
+    private void HideUI()
+    {
+        if (_currentUI == null) return;
+        Destroy(_currentUI);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            ShowUI();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        HideUI();
+    }
+    
 }

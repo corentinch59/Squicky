@@ -34,4 +34,7 @@ public class Tent : MonoBehaviour
         seq.AppendCallback(() => Destroy(gameObject));
         onFinished.Invoke(); //callback progression quete
     }
+    
+    
+    
 }
