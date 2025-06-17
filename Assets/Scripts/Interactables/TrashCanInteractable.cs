@@ -18,7 +18,6 @@ public class TrashCanInteractable : MonoBehaviour, IInteractable
         transform.DOShakeRotation(_animationDuration, new Vector3(0f, 30, 0f));
         transform.DOShakePosition(_animationDuration, new Vector3(0f, 0.3f, 0f), 10);
         
-        interactor.GetComponent<Inventory>().ThrowTrash();
         onFinished.Invoke(); // callback quete qui progresse (dechets jetés)
     }
     

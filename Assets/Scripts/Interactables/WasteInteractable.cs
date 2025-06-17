@@ -27,7 +27,6 @@ public class WasteInteractable : MonoBehaviour, IInteractable
         seq.Append(transform.DOScale(0, _animationDuration/3));
         seq.AppendCallback((() =>
         {
-            interactor.GetComponent<Inventory>().GrabTrash();
             onFinished.Invoke(); // callback dechet ramassé
             Destroy(gameObject);
         }));

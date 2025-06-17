@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8736823576063413332}
   - component: {fileID: 7679432700439755985}
   - component: {fileID: 1643623938370667021}
-  - component: {fileID: 5697586462835720645}
   - component: {fileID: 5742940160410420413}
   m_Layer: 0
   m_Name: Squicky
@@ -256,19 +255,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5697586462835720645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4539116397095707949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7e60efea07329a469eb8dc4bfcc85a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trashCounterText: {fileID: 0}
 --- !u!54 &5742940160410420413
 Rigidbody:
   m_ObjectHideFlags: 0
