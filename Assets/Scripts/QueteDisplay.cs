@@ -9,6 +9,7 @@ public class QueteDisplay : MonoBehaviour
     public GameObject singleStagePrefab;
     public GameObject content;
     public GameObject stageContent;
+    public Compass compass;
     
     private void OnEnable()
     {
@@ -44,7 +45,6 @@ public class QueteDisplay : MonoBehaviour
 
     public void DisplayQuete(Quete quete)
     {
-        Debug.Log(quete);
         // remove all children from stageContent
         foreach (Transform child in stageContent.transform)
         {
@@ -56,6 +56,7 @@ public class QueteDisplay : MonoBehaviour
         {
             GameObject singleStage = Instantiate(singleStagePrefab, stageContent.transform);
             SingleStageDisplay singleStageDisplay = singleStage.GetComponent<SingleStageDisplay>();
+            singleStageDisplay.compass = compass;
             if (singleStageDisplay != null)
             {
                 singleStageDisplay.quete = stage;

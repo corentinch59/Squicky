@@ -17,7 +17,7 @@ public class SingleQueteDisplay : MonoBehaviour
         set
         {
             _quete = value;
-            title.text = value.title + (value.IsCompleted() ? " (Done)" : "");
+            title.text = value.title;
             description.text = value.description;
             
             if (value.IsCompleted())
@@ -33,7 +33,7 @@ public class SingleQueteDisplay : MonoBehaviour
     
     public UnityEvent<Quete> onClick;
     private Quete _quete;
-    
+
     public void InvokeOnClick()
     {
         if (onClick != null)
