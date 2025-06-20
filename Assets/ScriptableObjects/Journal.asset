@@ -15,10 +15,6 @@ MonoBehaviour:
   pages:
   - {fileID: 11400000, guid: 2b7135b3df6f10c4f8e6ed1e8b31a604, type: 2}
   - {fileID: 11400000, guid: 5a280b5486494124aa32cfd0d2b718df, type: 2}
-  - {fileID: 11400000, guid: ea87643d0999fa0418785c1668abc547, type: 2}
-  - {fileID: 11400000, guid: b8c57ba7bb1694748967569b05fdbc84, type: 2}
-  - {fileID: 11400000, guid: 7701715416db35048b68b95a2d0a1840, type: 2}
-  - {fileID: 11400000, guid: 6904e15a1d0bf774f8fa4a5b05403542, type: 2}
   - {fileID: 11400000, guid: aa60f68275535ad4ab5061776c968605, type: 2}
   - {fileID: 11400000, guid: 9dd9fcb9f5c719140bd0770d8b3cb401, type: 2}
   onJournalUpdated:
