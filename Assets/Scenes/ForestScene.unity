@@ -5670,6 +5670,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squicky
       objectReference: {fileID: 0}
+    - target: {fileID: 4539116397095707949, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5165951857178193373, guid: afba301dce844e146803d10d281705a6,
         type: 3}
       propertyPath: m_SlopeLimit
@@ -5694,6 +5699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662613620744856263, guid: afba301dce844e146803d10d281705a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8736823576063413332, guid: afba301dce844e146803d10d281705a6,
         type: 3}
