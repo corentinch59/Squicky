@@ -2063,6 +2063,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &620094545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620094548}
+  - component: {fileID: 620094547}
+  - component: {fileID: 620094546}
+  m_Layer: 0
+  m_Name: Bubble1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &620094546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620094545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd8983fcace4f74ea339fe33b7bdcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  journal: {fileID: 11400000, guid: bea7d71b2ebdd7f48a20c53ef70cb84e, type: 2}
+  pagesToAdd:
+  - {fileID: 11400000, guid: ea87643d0999fa0418785c1668abc547, type: 2}
+  - {fileID: 11400000, guid: b8c57ba7bb1694748967569b05fdbc84, type: 2}
+  playerCollider: {fileID: 1980541258}
+  textToDisplay: "Des d\xE9ch\xEAts ! \xC7a peut \xEAtre dangereux !"
+  displayDuration: 5
+--- !u!65 &620094547
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620094545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.459076, y: 5.440843, z: 13.588806}
+  m_Center: {x: 0.9128876, y: 2.2204216, z: 3.6730042}
+--- !u!4 &620094548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620094545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 329.6, y: 0, z: -252.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &620459967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6267,6 +6340,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1834495756}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1980541258 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 4780174958484931043, guid: afba301dce844e146803d10d281705a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1834495756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1981047461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981047464}
+  - component: {fileID: 1981047463}
+  - component: {fileID: 1981047462}
+  m_Layer: 0
+  m_Name: Bubble1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1981047462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981047461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd8983fcace4f74ea339fe33b7bdcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  journal: {fileID: 11400000, guid: bea7d71b2ebdd7f48a20c53ef70cb84e, type: 2}
+  pagesToAdd:
+  - {fileID: 11400000, guid: 7701715416db35048b68b95a2d0a1840, type: 2}
+  - {fileID: 11400000, guid: 6904e15a1d0bf774f8fa4a5b05403542, type: 2}
+  playerCollider: {fileID: 1980541258}
+  textToDisplay: "\xC7a me rappelle un feu dans ma for\xEAt..."
+  displayDuration: 5
+--- !u!65 &1981047463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981047461}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.459076, y: 5.440843, z: 13.588806}
+  m_Center: {x: 0.9128876, y: 2.2204216, z: 3.6730042}
+--- !u!4 &1981047464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981047461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 330.56, y: 0, z: -281.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994634366
 GameObject:
   m_ObjectHideFlags: 0
@@ -7724,3 +7876,5 @@ SceneRoots:
   - {fileID: 3442366554899151391}
   - {fileID: 442716497}
   - {fileID: 1094908517}
+  - {fileID: 1981047464}
+  - {fileID: 620094548}
