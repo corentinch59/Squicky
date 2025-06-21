@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -5,6 +6,7 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using Object = UnityEngine.Object;
 
 public class SingleStageDisplay : MonoBehaviour
 {
@@ -53,11 +55,22 @@ public class SingleStageDisplay : MonoBehaviour
         }
     }
     
+    public static List<Type> types = new()
+    {
+        typeof(BucketFiller),
+        typeof(BucketInteractable),
+        typeof(Firepit),
+        typeof(Tent),
+        typeof(TentCordInteractable),
+        typeof(TrashCanInteractable),
+        typeof(WasteInteractable)
+    };
+    
     public static IEnumerable<GameObject> FindAllGameObjectsThatDirectlyReference(ScriptableObject target)
     {
         HashSet<GameObject> results = new HashSet<GameObject>();
 
-        foreach(var componentType in TypeCache.GetTypesDerivedFrom<MonoBehaviour>())
+        foreach(Type componentType in types)
         {
             if(componentType.IsGenericTypeDefinition)
             {
