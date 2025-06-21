@@ -28,6 +28,7 @@ public class WasteInteractable : MonoBehaviour, IInteractable
         seq.AppendCallback((() =>
         {
             onFinished.Invoke(); // callback dechet ramassé
+            Destroy(_currentUI);
             Destroy(gameObject);
         }));
 
