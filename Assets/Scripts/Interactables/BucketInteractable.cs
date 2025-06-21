@@ -10,7 +10,10 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
     [SerializeField] private float _jumpDuration;
     [SerializeField] private LayerMask _layerMask;
 
-    [HideInInspector] public bool isBucketFilled = false;                    
+    [SerializeField] private GameObject emptyBucketModel;
+    [SerializeField] private GameObject fullBucketModel;
+
+    [HideInInspector] public bool isBucketFilled = false;
 
     public void Interact(GameObject interactor)
     {
@@ -43,6 +46,7 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
             collider.enabled = true;
             rb.useGravity = true;
         }
+
         transform.SetParent(null);
     }
 
@@ -77,4 +81,9 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
         }
     }
 
+    public void Update()
+    {
+        emptyBucketModel.SetActive(!isBucketFilled);
+        fullBucketModel.SetActive(isBucketFilled);
+    }
 }
