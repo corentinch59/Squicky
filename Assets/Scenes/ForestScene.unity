@@ -1413,9 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   journal: {fileID: 11400000, guid: bea7d71b2ebdd7f48a20c53ef70cb84e, type: 2}
-  pagesToAdd:
-  - {fileID: 11400000, guid: ea87643d0999fa0418785c1668abc547, type: 2}
-  - {fileID: 11400000, guid: b8c57ba7bb1694748967569b05fdbc84, type: 2}
+  pagesToAdd: []
   playerCollider: {fileID: 1980541258}
   textToDisplay: "Des d\xE9ch\xEAts ! \xC7a peut \xEAtre dangereux !"
   displayDuration: 5
@@ -4055,9 +4053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   journal: {fileID: 11400000, guid: bea7d71b2ebdd7f48a20c53ef70cb84e, type: 2}
-  pagesToAdd:
-  - {fileID: 11400000, guid: 7701715416db35048b68b95a2d0a1840, type: 2}
-  - {fileID: 11400000, guid: 6904e15a1d0bf774f8fa4a5b05403542, type: 2}
+  pagesToAdd: []
   playerCollider: {fileID: 1980541258}
   textToDisplay: "\xC7a me rappelle un feu dans ma for\xEAt..."
   displayDuration: 5

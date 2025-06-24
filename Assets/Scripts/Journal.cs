@@ -8,16 +8,16 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "New Journal", menuName = "Squicky/Journal")]
 public class Journal : ScriptableObject
 {
-    [SerializeField] private JournalPage[] pages;
+    [SerializeField] private List<JournalPage> pages = new();
     public UnityEvent onJournalUpdated;
 
     public void AddPage(JournalPage page)
     {
         // if page with the same number already exists, remove the previous one
-        pages = pages.Where(p => p.pageNumber != page.pageNumber).ToArray();
+        pages = pages.Where(p => p.pageNumber != page.pageNumber).ToList();
         
         pages.Append(page);
-        pages = pages.OrderBy(p => p.pageNumber).ToArray();
+        pages = pages.OrderBy(p => p.pageNumber).ToList();
         onJournalUpdated.Invoke();
     }
 

@@ -12,7 +12,7 @@ public class Quete : ScriptableObject
     public UnityEvent onQueteUpdated;
     public UnityEvent<Quete> onQueteCompleted;
 
-    [SerializeField] public QueteStage[] stages;
+    [SerializeField] public List<QueteStage> stages = new();
 
     private void OnEnable()
     {
@@ -53,7 +53,7 @@ public class Quete : ScriptableObject
 
     public int GetStageCount()
     {
-        return stages.Length;
+        return stages.Count;
     }
     
     public int GetCompletedStageCount()
@@ -71,7 +71,7 @@ public class Quete : ScriptableObject
 
     public void FinishStage(int stage)
     {
-        if (stage < 0 || stage >= stages.Length)
+        if (stage < 0 || stage >= stages.Count)
         {
             Debug.LogError("Invalid stage index: " + stage);
             return;
