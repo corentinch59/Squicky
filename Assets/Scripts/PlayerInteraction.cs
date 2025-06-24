@@ -46,7 +46,8 @@ public class PlayerInteraction : MonoBehaviour
                 if (temp != null)
                 {
                     IInteractable interactable = temp.GetComponent<IInteractable>();
-                    interactable.Interact(gameObject);
+                    if(interactable != null)
+                        interactable.Interact(gameObject);
                 }
             }
             else
