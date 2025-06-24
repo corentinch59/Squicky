@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Poubelle
   description: "Mettre tout les d\xE9ch\xEAts \xE0 la poubelle pour prot\xE9ger l'environnement."
-  isCompleted: 1
+  isCompleted: 0
   onCompleted:
     m_PersistentCalls:
       m_Calls: []

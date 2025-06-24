@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Sac en papier 4
   description: "Ramasser le quatri\xE8me sac en papier"
-  isCompleted: 1
+  isCompleted: 0
   onCompleted:
     m_PersistentCalls:
       m_Calls: []

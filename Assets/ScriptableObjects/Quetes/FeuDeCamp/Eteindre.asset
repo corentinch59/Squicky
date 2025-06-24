@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Eteindre le feu
   description: "Utiliser le seau d'eau pour \xE9teindre le feu."
-  isCompleted: 1
+  isCompleted: 0
   onCompleted:
     m_PersistentCalls:
       m_Calls: []
