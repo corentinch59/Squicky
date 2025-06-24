@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Boite en carton
   description: Ramasser la boite en carton
-  isCompleted: 0
+  isCompleted: 1
   onCompleted:
     m_PersistentCalls:
       m_Calls: []

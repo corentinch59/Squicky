@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Frites 3
   description: "Ramasser la troisi\xE8me boite de frites"
-  isCompleted: 0
+  isCompleted: 1
   onCompleted:
     m_PersistentCalls:
       m_Calls: []

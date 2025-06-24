@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: "Defaire la premi\xE8re tente"
   description: Enlever les fils pour defaire la tente.
-  isCompleted: 0
+  isCompleted: 1
   onCompleted:
     m_PersistentCalls:
       m_Calls: []

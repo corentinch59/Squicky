@@ -150,6 +150,7 @@ MonoBehaviour:
     type: 3}
   content: {fileID: 6249881588537893653}
   stageContent: {fileID: 6963638497495873245}
+  compass: {fileID: 0}
 --- !u!1 &5021761748500308010
 GameObject:
   m_ObjectHideFlags: 0
