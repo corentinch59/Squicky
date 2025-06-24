@@ -15,6 +15,8 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
 
     [HideInInspector] public bool isBucketFilled = false;
 
+    private Tween t;
+
     public void Interact(GameObject interactor)
     {
         PlayerInteraction p = interactor.GetComponent<PlayerInteraction>();
@@ -33,7 +35,7 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
         p.HeldInteractable = gameObject;
         transform.SetParent(interactor.transform);
         transform.DORotateQuaternion(interactor.transform.rotation, _jumpDuration);
-        Tween t = transform.DOLocalJump(p.GetHeadSpot.localPosition, _jumpPower, 1, _jumpDuration);
+        t = transform.DOLocalJump(p.GetHeadSpot.localPosition, _jumpPower, 1, _jumpDuration);
     }
 
     public void Drop()
@@ -47,6 +49,8 @@ public class BucketInteractable : MonoBehaviour, IInteractable, IDropable
             rb.useGravity = true;
         }
 
+        if(t != null)
+            t.Kill();
         transform.SetParent(null);
     }
 
