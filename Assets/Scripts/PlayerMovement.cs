@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Camera _camera;
     [SerializeField] private float _speed;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Transform _chicken;
 
     private Vector2 _mDirection;
 
@@ -33,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         move.y = _rb.velocity.y;
         _rb.velocity = new Vector3(move.x * _speed, _rb.velocity.y, move.z * _speed);
 
+        _animator.SetFloat("Speed", input.sqrMagnitude);
 
         Vector3 look = _rb.velocity.normalized;
         look.y = 0;
@@ -42,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.LookRotation(look);
         _rb.rotation = targetRotation;
+        _chicken.rotation = targetRotation;
     }
 
 }
