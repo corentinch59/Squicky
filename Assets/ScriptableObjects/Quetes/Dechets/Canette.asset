@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Canette
   description: Ramasser la canette
-  isCompleted: 0
+  isCompleted: 1
   onCompleted:
     m_PersistentCalls:
       m_Calls: []
